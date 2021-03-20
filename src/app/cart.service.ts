@@ -1,8 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
 @Injectable()
 export class CartService {
-
-  constructor() { }
-
+  item = [];
+  constructor() {}
+  addToCart(product) {
+    this.item.push(product);
+  }
 }
