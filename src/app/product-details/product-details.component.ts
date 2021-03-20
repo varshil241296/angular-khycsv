@@ -9,7 +9,9 @@ import { products } from "../products";
 })
 export class ProductDetailsComponent implements OnInit {
   product;
+  addToCart(product){
 
+  }
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
