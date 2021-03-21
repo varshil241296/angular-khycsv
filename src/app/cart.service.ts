@@ -6,8 +6,10 @@ export class CartService {
   constructor() {}
   addToCart(product) {
     this.item.push(product);
+    localStorage.setItem("clickCounter", JSON.stringify(this.item));
   }
   getItems() {
+    this.item = JSON.parse(localStorage.getItem("clickCounter"));
     return this.item;
   }
 }
